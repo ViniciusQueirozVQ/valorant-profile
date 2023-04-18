@@ -1,0 +1,151 @@
+{
+  "content": [
+    {
+      "id": 1,
+      "nome": "Jett",
+      "nacionalidade": "COREIA DO SUL",
+      "classe": "DUELISTA",
+      "avatar": "assets/avatars/jett.png"
+    },
+    {
+      "id": 2,
+      "nome": "Viper",
+      "nacionalidade": "ESTADOS UNIDOS",
+      "classe": "CONTROLADOR",
+      "avatar": "assets/avatars/viper.png"
+    },
+    {
+      "id": 3,
+      "nome": "Brimstone",
+      "nacionalidade": "ESTADOS UNIDOS",
+      "classe": "CONTROLADOR",
+      "avatar": "assets/avatars/brimstone.png"
+    },
+    {
+      "id": 4,
+      "nome": "Omen",
+      "nacionalidade": "DESCONHECIDA",
+      "classe": "CONTROLADOR",
+      "avatar": "assets/avatars/omen.png"
+    },
+    {
+      "id": 5,
+      "nome": "Killjoy",
+      "nacionalidade": "ALEMANHA",
+      "classe": "SENTINELA",
+      "avatar": "assets/avatars/killjoy.png"
+    },
+    {
+      "id": 6,
+      "nome": "Cypher",
+      "nacionalidade": "MARROCOS",
+      "classe": "SENTINELA",
+      "avatar": "assets/avatars/cypher.png"
+    },
+    {
+      "id": 7,
+      "nome": "Sova",
+      "nacionalidade": "RÚSSIA",
+      "classe": "INICIADOR",
+      "avatar": "assets/avatars/sova.png"
+    },
+    {
+      "id": 8,
+      "nome": "Breach",
+      "nacionalidade": "SUÉCIA",
+      "classe": "INICIADOR",
+      "avatar": "assets/avatars/breach.png"
+    },
+    {
+      "id": 9,
+      "nome": "Skye",
+      "nacionalidade": "AUSTRÁLIA",
+      "classe": "INICIADOR",
+      "avatar": "assets/avatars/skye.png"
+    },
+    {
+      "id": 10,
+      "nome": "Reyna",
+      "nacionalidade": "MÉXICO",
+      "classe": "DUELISTA",
+      "avatar": "assets/avatars/reyna.png"
+    },
+    {
+      "id": 11,
+      "nome": "Phoenix",
+      "nacionalidade": "REINO UNIDO",
+      "classe": "DUELISTA",
+      "avatar": "assets/avatars/phoenix.png"
+    },
+    {
+      "id": 12,
+      "nome": "Yoru",
+      "nacionalidade": "JAPÃO",
+      "classe": "DUELISTA",
+      "avatar": "assets/avatars/yoru.png"
+    },
+    {
+      "id": 13,
+      "nome": "Gekko",
+      "nacionalidade": "ESTADOS UNIDOS",
+      "classe": "INICIADOR",
+      "avatar": "assets/avatars/gekko.png"
+    },
+    {
+      "id": 14,
+      "nome": "Fade",
+      "nacionalidade": "TURQUIA",
+      "classe": "INICIADOR",
+      "avatar": "assets/avatars/fade.png"
+    },
+    {
+      "id": 15,
+      "nome": "Raze",
+      "nacionalidade": "BRASIL",
+      "classe": "DUELISTA",
+      "avatar": "assets/avatars/raze.png"
+    },
+    {
+      "id": 16,
+      "nome": "Chamber",
+      "nacionalidade": "FRANÇA",
+      "classe": "SENTINELA",
+      "avatar": "assets/avatars/chamber.png"
+    },
+    {
+      "id": 17,
+      "nome": "KAY/O",
+      "nacionalidade": "DESCONHECIDA",
+      "classe": "SENTINELA",
+      "avatar": "assets/avatars/kayo.png"
+    },
+    {
+      "id": 18,
+      "nome": "Harbor",
+      "nacionalidade": "INDIA",
+      "classe": "CONTROLADOR",
+      "avatar": "assets/avatars/harbor.png"
+    },
+    {
+      "id": 19,
+      "nome": "Astra",
+      "nacionalidade": "GANA",
+      "classe": "CONTROLADOR",
+      "avatar": "assets/avatars/astra.png"
+    },
+    {
+      "id": 20,
+      "nome": "Neon",
+      "nacionalidade": "FILIPINAS",
+      "classe": "DUELISTA",
+      "avatar": "assets/avatars/neon.png"
+    },
+    {
+      "id": 21,
+      "nome": "Sage",
+      "nacionalidade": "CHINA",
+      "classe": "SENTINELA",
+      "avatar": "assets/avatars/sage.png"
+    }
+  ]
+}
