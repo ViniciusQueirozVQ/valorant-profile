@@ -1,16 +1,15 @@
 # valorant_profiles
 
-A new Flutter project.
+Valorant profiles
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Para iniciar o projeto, baixe as dependencias. o projeto utiliza flutter 3
 
-A few resources to get you started if this is your first Flutter project:
+```flutter pub get```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+para executar:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```flutter run```
+
+Um apk pode ser obtido em: [APK](https://apk)
