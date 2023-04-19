@@ -12,4 +12,4 @@ para executar:
 
 ```flutter run```
 
-Um apk pode ser obtido em: [APK](https://apk)
+Um apk pode ser obtido em: [APK](https://github.com/ViniciusQueirozVQ/valorant-profile/releases/download/v0.1-beta/valorant-profiles.apk)
