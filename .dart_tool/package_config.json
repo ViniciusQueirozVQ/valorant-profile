@@ -62,18 +62,6 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "http",
-      "rootUri": "file:///home/vinicius/.pub-cache/hosted/pub.dev/http-0.13.5",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "http_parser",
-      "rootUri": "file:///home/vinicius/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "js",
       "rootUri": "file:///home/vinicius/.pub-cache/hosted/pub.dev/js-0.6.5",
       "packageUri": "lib/",
@@ -158,12 +146,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "typed_data",
-      "rootUri": "file:///home/vinicius/.pub-cache/hosted/pub.dev/typed_data-1.3.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "vector_math",
       "rootUri": "file:///home/vinicius/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
@@ -176,7 +158,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-21T19:56:55.201280Z",
+  "generated": "2023-04-21T21:07:14.532851Z",
   "generator": "pub",
   "generatorVersion": "2.19.4"
 }

@@ -30,14 +30,6 @@ flutter_lints
 2.17
 file:///home/vinicius/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1/
 file:///home/vinicius/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1/lib/
-http
-2.14
-file:///home/vinicius/.pub-cache/hosted/pub.dev/http-0.13.5/
-file:///home/vinicius/.pub-cache/hosted/pub.dev/http-0.13.5/lib/
-http_parser
-2.12
-file:///home/vinicius/.pub-cache/hosted/pub.dev/http_parser-4.0.2/
-file:///home/vinicius/.pub-cache/hosted/pub.dev/http_parser-4.0.2/lib/
 js
 2.16
 file:///home/vinicius/.pub-cache/hosted/pub.dev/js-0.6.5/
@@ -90,10 +82,6 @@ transparent_image
 2.12
 file:///home/vinicius/.pub-cache/hosted/pub.dev/transparent_image-2.0.1/
 file:///home/vinicius/.pub-cache/hosted/pub.dev/transparent_image-2.0.1/lib/
-typed_data
-2.12
-file:///home/vinicius/.pub-cache/hosted/pub.dev/typed_data-1.3.1/
-file:///home/vinicius/.pub-cache/hosted/pub.dev/typed_data-1.3.1/lib/
 vector_math
 2.14
 file:///home/vinicius/.pub-cache/hosted/pub.dev/vector_math-2.1.4/
