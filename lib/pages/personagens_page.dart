@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:valorant_profiles/widgets/personagem_list.dart';
 
-class UsuariosPage extends StatelessWidget {
-  const UsuariosPage({Key? key}) : super(key: key);
+class PersonagensPage extends StatelessWidget {
+  const PersonagensPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
