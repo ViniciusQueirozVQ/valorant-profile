@@ -9,26 +9,31 @@ import '../models/personagem.dart';
 
 class PersonagemRepository with ChangeNotifier {
   int _page = 0;
-
+  bool lastPage = false;
   final List<Personagem> _personagens = [];
   late DetalhesPersonagem _personagem;
 
   List<Personagem> get personagens => _personagens;
+
   DetalhesPersonagem get personagem => _personagem;
 
   getPersonagens(int limit) async {
-    final headers = {'Accept-Charset': 'UTF-8'};
-    final url = Uri.parse(
-        '$BASE_API_ENDPOINT:$PORT_FEEDS/api/personagens?page=$_page&size=$limit');
-    final responseRaw = await http.get(url, headers: headers);
-    final response = utf8.decode(responseRaw.bodyBytes);
-    final results = jsonDecode(response)['content'];
+    if (!lastPage) {
+      final headers = {'Accept-Charset': 'UTF-8'};
+      final url = Uri.parse(
+          '$BASE_API_ENDPOINT:$PORT_FEEDS/api/personagens?page=$_page&size=$limit');
+      final responseRaw = await http.get(url, headers: headers);
+      final results = jsonDecode(utf8.decode(responseRaw.bodyBytes));
+      final content = results['content'];
 
-    for (var i = 0; i < results.length; i++) {
-      _personagens.add(Personagem.fromMap(results[i]));
+      for (var i = 0; i < content.length; i++) {
+        _personagens.add(Personagem.fromMap(content[i]));
+      }
+      lastPage = results['last'];
+      _page++;
+
+      notifyListeners();
     }
-    _page++;
-    notifyListeners();
   }
 
   getPersonagem(int id) async {

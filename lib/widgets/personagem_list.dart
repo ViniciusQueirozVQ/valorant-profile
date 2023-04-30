@@ -43,7 +43,6 @@ class _PersonagemListState extends State<PersonagemList> {
   void loadPersonagens() async {
     loading.value = true;
     _itensPerPage = (widget._contentPixelSize/cardHeight).floor();
-    print(_itensPerPage);
     await personagemRepository.getPersonagens(_itensPerPage);
     loading.value = false;
   }
@@ -105,7 +104,8 @@ class _PersonagemListState extends State<PersonagemList> {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage(personagem.avatar),
+                    image: NetworkImage(personagem.avatar),
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
