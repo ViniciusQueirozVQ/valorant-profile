@@ -1,63 +1,42 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 import 'package:valorant_profiles/models/detalhes_personagem.dart';
 
+import '../configs.dart';
 import '../models/personagem.dart';
 
 class PersonagemRepository with ChangeNotifier {
   int _page = 1;
-  final int _totalItems = 21;
 
   final List<Personagem> _personagens = [];
-  late final DetalhesPersonagem _personagem;
+  late DetalhesPersonagem _personagem;
 
   List<Personagem> get personagens => _personagens;
-
   DetalhesPersonagem get personagem => _personagem;
 
   getPersonagens(int limit) async {
-    int totalPages =
-        (_totalItems / limit).ceil(); // Calcular o número total de páginas
-
-    if (_page <= totalPages) {
-      // Verificar se ainda há páginas para exibir
-      final String responseString =
-          await rootBundle.loadString('assets/feeds.json');
-      var response = json.decode(responseString);
-      var personagensResponse = response["content"];
-      var startIndex = (_page - 1) * limit;
-      var endIndex = startIndex + limit;
-
-      // Tratar o caso da última página
-      if (endIndex > _totalItems) {
-        endIndex = _totalItems;
+      final url = Uri.parse(
+        '$BASE_API_ENDPOINT/personagens?_page=$_page&_limit=$limit',
+      );
+      final response = await http.get(url);
+      final results = jsonDecode(response.body);
+      for (var i = 0; i < results.length; i++) {
+        _personagens.add(Personagem.fromMap(results[i]));
       }
-
-      var subListA = personagensResponse.sublist(startIndex, endIndex);
-
-      for (int i = 0; i < subListA.length; i++) {
-        _personagens.add(Personagem.fromMap(subListA[i]));
-      }
-
       _page++;
       notifyListeners();
-    }
   }
 
   getPersonagem(int id) async {
-    final String responseString =
-        await rootBundle.loadString('assets/detalhes.json');
-    var response = json.decode(responseString);
-    var personagensResponse = response["content"];
+    final url = Uri.parse(
+      '$BASE_API_ENDPOINT/detalhes/$id',
+    );
+    final response = await http.get(url);
+    final result = jsonDecode(response.body);
+    _personagem = DetalhesPersonagem.fromMap(result);
 
-    var personagemResponse = personagensResponse
-        .firstWhere((personagem) => personagem["id"] == id, orElse: () => null);
-
-    if (personagemResponse != null) {
-      _personagem = DetalhesPersonagem.fromMap(personagemResponse);
-      notifyListeners();
-    }
+    notifyListeners();
   }
 }
