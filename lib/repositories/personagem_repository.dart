@@ -8,7 +8,7 @@ import '../configs.dart';
 import '../models/personagem.dart';
 
 class PersonagemRepository with ChangeNotifier {
-  int _page = 1;
+  int _page = 0;
 
   final List<Personagem> _personagens = [];
   late DetalhesPersonagem _personagem;
@@ -17,25 +17,28 @@ class PersonagemRepository with ChangeNotifier {
   DetalhesPersonagem get personagem => _personagem;
 
   getPersonagens(int limit) async {
-      final url = Uri.parse(
-        '$BASE_API_ENDPOINT/personagens?_page=$_page&_limit=$limit',
-      );
-      final response = await http.get(url);
-      final results = jsonDecode(response.body);
-      for (var i = 0; i < results.length; i++) {
-        _personagens.add(Personagem.fromMap(results[i]));
-      }
-      _page++;
-      notifyListeners();
+    final headers = {'Accept-Charset': 'UTF-8'};
+    final url = Uri.parse(
+        '$BASE_API_ENDPOINT:$PORT_FEEDS/api/personagens?page=$_page&size=$limit');
+    final responseRaw = await http.get(url, headers: headers);
+    final response = utf8.decode(responseRaw.bodyBytes);
+    final results = jsonDecode(response)['content'];
+
+    for (var i = 0; i < results.length; i++) {
+      _personagens.add(Personagem.fromMap(results[i]));
+    }
+    _page++;
+    notifyListeners();
   }
 
   getPersonagem(int id) async {
+    final headers = {'Accept-Charset': 'UTF-8'};
     final url = Uri.parse(
-      '$BASE_API_ENDPOINT/detalhes/$id',
+      '$BASE_API_ENDPOINT:$PORT_DETALHES/api/detalhes/$id',
     );
-    final response = await http.get(url);
-    final result = jsonDecode(response.body);
-    _personagem = DetalhesPersonagem.fromMap(result);
+    final responseRaw = await http.get(url, headers: headers);
+    final response = utf8.decode(responseRaw.bodyBytes);
+    _personagem = DetalhesPersonagem.fromMap(jsonDecode(response));
 
     notifyListeners();
   }
