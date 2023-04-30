@@ -11,7 +11,7 @@ class PersonagensPage extends StatelessWidget {
         title: const Text('Valorant: Profiles'),
         centerTitle: true,
       ),
-      body: PersonagemList(),
+      body: PersonagemList(MediaQuery.of(context).size.height),
     );
   }
 }

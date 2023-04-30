@@ -4,6 +4,9 @@ import '../pages/detalhes_page.dart';
 import '../repositories/personagem_repository.dart';
 
 class PersonagemList extends StatefulWidget {
+  final double _contentPixelSize;
+  PersonagemList(this._contentPixelSize);
+
   @override
   _PersonagemListState createState() => _PersonagemListState();
 }
@@ -12,6 +15,8 @@ class _PersonagemListState extends State<PersonagemList> {
   late PersonagemRepository personagemRepository;
   final loading = ValueNotifier(true);
   late final ScrollController _scrollController;
+  static const int cardHeight = 120;
+  int _itensPerPage = 0;
 
   @override
   void initState() {
@@ -37,7 +42,9 @@ class _PersonagemListState extends State<PersonagemList> {
 
   void loadPersonagens() async {
     loading.value = true;
-    await personagemRepository.getPersonagens();
+    _itensPerPage = (widget._contentPixelSize/cardHeight).floor();
+    print(_itensPerPage);
+    await personagemRepository.getPersonagens(_itensPerPage);
     loading.value = false;
   }
 

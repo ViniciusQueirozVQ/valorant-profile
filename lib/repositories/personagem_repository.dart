@@ -8,7 +8,6 @@ import '../models/personagem.dart';
 
 class PersonagemRepository with ChangeNotifier {
   int _page = 1;
-  final int _limit = 5;
   final int _totalItems = 21;
 
   final List<Personagem> _personagens = [];
@@ -18,9 +17,9 @@ class PersonagemRepository with ChangeNotifier {
 
   DetalhesPersonagem get personagem => _personagem;
 
-  getPersonagens() async {
+  getPersonagens(int limit) async {
     int totalPages =
-        (_totalItems / _limit).ceil(); // Calcular o número total de páginas
+        (_totalItems / limit).ceil(); // Calcular o número total de páginas
 
     if (_page <= totalPages) {
       // Verificar se ainda há páginas para exibir
@@ -28,8 +27,8 @@ class PersonagemRepository with ChangeNotifier {
           await rootBundle.loadString('assets/feeds.json');
       var response = json.decode(responseString);
       var personagensResponse = response["content"];
-      var startIndex = (_page - 1) * _limit;
-      var endIndex = startIndex + _limit;
+      var startIndex = (_page - 1) * limit;
+      var endIndex = startIndex + limit;
 
       // Tratar o caso da última página
       if (endIndex > _totalItems) {
