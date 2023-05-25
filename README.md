@@ -15,7 +15,7 @@ para executar:
 ```flutter run```
 
 ## Backend - Microserviços
-### Link para o repositório dos microserviços utilizando docker
+### Link para o repositório dos microsserviços utilizando docker
 
 [valorant-profile-microservices](https://github.com/ViniciusQueirozVQ/valorant-profile-microservices)
 
